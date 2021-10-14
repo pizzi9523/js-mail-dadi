@@ -49,17 +49,17 @@ const esitoElement = document.createElement("h2");
 containerElement.append(esitoElement)
 
 if (userRandomNumber > pcRandomNumber) {
-    console.log("User hai vinto");
+    // console.log("User hai vinto");
     esitoElement.innerHTML = "User hai vinto";
 
 }
 else if (userRandomNumber < pcRandomNumber) {
-    console.log("PC hai vinto");
+    // console.log("PC hai vinto");
     esitoElement.innerHTML = "Pc hai vinto";
 
 }
 else {
-    console.log("Avete pareggiato");
+    // console.log("Avete pareggiato");
     esitoElement.innerHTML = "Avete pareggiato";
 
 }
