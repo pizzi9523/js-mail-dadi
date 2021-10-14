@@ -61,3 +61,16 @@ else {
     esitoElement.innerHTML = "Avete pareggiato";
 
 }
+
+//Usiamo input e un bottone per inserire la mail e mostriamo i risultati in pagina
+const inputElement = document.getElementById("email");
+const buttonElement = document.getElementById("send");
+
+
+buttonElement.addEventListener("click", function () {
+    const userEmail = inputElement.value;
+    const userEmailElement = document.createElement("p");
+    containerElement.insertAdjacentElement("afterend", userEmailElement);
+    userEmailElement.innerHTML = userEmail;
+})
+
