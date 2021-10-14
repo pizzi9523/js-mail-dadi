@@ -24,21 +24,23 @@ else {
 }*/
 
 //Gioco dei dadi
+
+//Manipolazione DOM creo 2 paragrafi dentro il container con del testo
 const containerElement = document.querySelector(".container");
-//Generare un numero random da 1 a 6, sia per il giocatore sia per il computer
 const userChoiceElement = document.createElement("p");
 const pcChoiceElement = document.createElement("p");
 containerElement.append(userChoiceElement);
 containerElement.append(pcChoiceElement);
-
 userChoiceElement.innerHTML = "L'User ha scelto il numero: ";
 pcChoiceElement.innerHTML = "Il PC ha scelto il numero: ";
 
-
+//Generare un numero random da 1 a 6, sia per il giocatore sia per il computer
 const userRandomNumber = Math.floor(Math.random() * 6) + 1;
 const pcRandomNumber = Math.floor(Math.random() * 6) + 1;
 // console.log(userRandomNumber);
 // console.log(pcRandomNumber);
+
+//Stampo i numeri scelti da user e PC
 userChoiceElement.append(userRandomNumber);
 pcChoiceElement.append(pcRandomNumber);
 
@@ -66,7 +68,7 @@ else {
 const inputElement = document.getElementById("email");
 const buttonElement = document.getElementById("send");
 
-
+//leggo le informazioni ricevute dopo il click del bottone
 buttonElement.addEventListener("click", function () {
     const userEmail = inputElement.value;
 
