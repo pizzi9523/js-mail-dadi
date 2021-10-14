@@ -22,3 +22,23 @@ else {
     messageElement.innerHTML = "Accesso Negato"
     messageElement.style.color = "red"
 }
+
+//Generare un numero random da 1 a 6, sia per il giocatore sia per il computer
+
+const userRandomNumber = Math.floor(Math.random() * 6) + 1;
+const pcRandomNumber = Math.floor(Math.random() * 6) + 1;
+// console.log(userRandomNumber);
+// console.log(pcRandomNumber);
+
+
+
+//Stabilire il vincitore in base al punteggio più alto
+if (userRandomNumber > pcRandomNumber) {
+    console.log("User hai vinto");
+}
+else if (userRandomNumber < pcRandomNumber) {
+    console.log("PC hai vinto");
+}
+else {
+    console.log("Avete pareggiato");
+}
