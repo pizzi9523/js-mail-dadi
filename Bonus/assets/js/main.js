@@ -77,22 +77,51 @@ buttonElement.addEventListener("click", function () {
     containerElement.insertAdjacentElement("afterend", userEmailElement);
     userEmailElement.innerHTML = userEmail;*/
 
-    //controllo che sia nella lista di chi può accedere
-    const flag = emailsAllowed.includes(userEmail);
-    //console.log(flag);
-
-    //stampo un messaggio appropriato sull'esito del controllo
+    //primo metodo usato con for
+    let message;
     const messageElement = document.getElementById("access");
-    if (flag == true) {
-        //console.log("Accesso Consentito");
-        messageElement.innerHTML = "Accesso Consentito";
-        messageElement.style.color = "green";
+
+    for (let i = 0; i < emailsAllowed.length; i++) {
+        const email = emailsAllowed[i];
+
+        if (userEmail == email) {
+            message = "Accesso consentito";
+            messageElement.innerHTML = message;
+            messageElement.style.color = "green";
+            break;
+        }
+        else {
+            message = "Accesso Negato";
+            messageElement.innerHTML = message;
+            messageElement.style.color = "red";
+
+        }
+
     }
-    else {
-        //console.log("Accesso Negato");
-        messageElement.innerHTML = "Accesso Negato";
-        messageElement.style.color = "red";
-    }
+
 })
+
+
+
+
+/* METODO INCLUDES
+controllo che sia nella lista di chi può accedere
+ const flag = emailsAllowed.includes(userEmail);
+console.log(flag);
+
+stampo un messaggio appropriato sull'esito del controllo
+     const messageElement = document.getElementById("access");
+    if (flag == true) {
+       //console.log("Accesso Consentito");
+       messageElement.innerHTML = "Accesso Consentito";
+       messageElement.style.color = "green";
+   }
+   else {
+       //console.log("Accesso Negato");
+       messageElement.innerHTML = "Accesso Negato";
+       messageElement.style.color = "red";
+    }
+})*/
+
 
 
